@@ -509,7 +509,13 @@ export const projectAPI = {
     return api.get('/api/v1/dashboard/activity/', { params });
   },
   
-  getProjects: () => api.get('/api/v1/projects/', { params: { location } }),
+  getProjects: (userLocation = null) => {
+  const params = {};
+  if (userLocation) {
+    params.location = userLocation;
+  }
+  return api.get('/api/v1/projects/', { params });
+},
   
   createProject: (projectData) => api.post('/api/v1/projects/', projectData),
   
