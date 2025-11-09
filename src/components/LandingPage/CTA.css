@@ -1,0 +1,20 @@
+.cta {
+  padding: 100px 5%;
+  background: #756099;
+  color: var(--white);
+  text-align: center;
+  border-radius: 20px;
+  margin: 0 5% 100px;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  opacity: 0.9;
+}

@@ -1,0 +1,178 @@
+/* App.css */
+:root {
+  --primary: #756099;
+  --primary-light: #756099;
+  --primary-dark: #7a22c9;
+  --secondary: #32CD32;
+  --secondary-light: #47d147;
+  --secondary-dark: #2bb82b;
+  --dark: #2d2b3a;
+  --light: #f8f9fa;
+  --white: #ffffff;
+  --gray: #6c757d;
+  --border-radius: 12px;
+  --box-shadow: 0 10px 30px rgba(138, 43, 226, 0.15);
+  --transition: all 0.3s ease;
+  --backgroundcolor: #a388cd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: var(--light);
+}
+
+/* Common button styles */
+.btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background: var(--secondary-dark);
+  transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 130px 5% 80px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .nav ul {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .nav ul {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+
+  .modal-content {
+    padding: 30px 20px;
+  }
+}
+/* Reset and base styles for landing page */
+.landing-page-app {
+  font-family: 'Poppins', sans-serif;
+  color: #2d2b3a;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: #f8f9fa;
+}
+
+/* Ensure Material-UI components don't interfere with landing page styles */
+.landing-page-app .MuiTypography-root,
+.landing-page-app .MuiButton-root,
+.landing-page-app .MuiInputBase-root {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* Loading state */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.2rem;
+  color: #756099;
+}
+
+/* Ensure the App takes full height */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content should grow to push footer to bottom */
+main {
+  flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .landing-page-app {
+    font-size: 14px;
+  }
+}
